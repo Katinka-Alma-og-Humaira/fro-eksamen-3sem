@@ -1,6 +1,6 @@
 const Newsletter = () => {
   return (
-    <section className="flex flex-col justify-center items-center gap-4 py-10 m-5">
+    <section className="flex flex-col justify-center items-center gap-3 py-10 m-5">
       <h2 className="text-center">WANT THE LATEST NIGHT CLUB NEWS</h2>
 
       <h3 className="text-center max-w-sm">
