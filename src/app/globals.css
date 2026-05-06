@@ -34,4 +34,11 @@
 
 body {
   background-color: var(--color-neutrals-900);
+
+  p,
+  h1,
+  h2,
+  h3 {
+    color: var(--color-text);
+  }
 }
