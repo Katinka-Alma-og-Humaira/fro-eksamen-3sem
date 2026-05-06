@@ -21,10 +21,10 @@ const Footer = () => {
       </div>
       <div>
         <h3>NEWS</h3>
-        <img src="" alt="" />
+        <img src="public/img/dummybillede.png" alt="dummy" />
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quidem rerum voluptas modi totam distinctio sed, qui dignissimos, veritatis, suscipit esse molestias reiciendis inventore cum pariatur. Ipsa esse voluptates impedit!</p>
         <p>April 17, 2026</p>
-        <img src="" alt="" />
+        <img src="public/img/dummybillede.png" alt="dummy" />
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quidem rerum voluptas modi totam distinctio sed, qui dignissimos, veritatis, suscipit esse molestias reiciendis inventore cum pariatur. Ipsa esse voluptates impedit!</p>
         <p>April 17, 2026</p>
       </div>
