@@ -2,18 +2,32 @@ import Image from "next/image";
 import { LiaSnapchatSquare } from "react-icons/lia";
 import { LiaTwitterSquare } from "react-icons/lia";
 import { LiaFacebookSquare } from "react-icons/lia";
+import { cacheLife } from "next/cache";
 
-const Testimonials = () => {
+async function getTestimonials() {
+  "use cache";
+  cacheLife("hours");
+
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/testimonials`);
+  return response.json();
+}
+
+const Testimonials = async () => {
+  const testimonials = await getTestimonials();
   return (
     <div className="flex flex-col justify-center items-center gap-3 py-10 m-5">
-      <Image src="/img/dummybillede.png" alt="" width={200} height={50} />
-      <h2>NAME</h2>
-      <p className="text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut omnis vitae dolor quia harum iste quidem nemo, labore modi molestiae animi atque, dolores laboriosam magnam deserunt voluptate aspernatur aliquam vel.</p>
-      <div className="flex">
-        <LiaFacebookSquare size={50} />
-        <LiaTwitterSquare size={50} />
-        <LiaSnapchatSquare size={50} />
-      </div>
+      {testimonials.map((testimonials) => (
+        <div key={testimonials.id} className="flex flex-col justify-center items-center gap-3">
+          <Image src={testimonials.asset.url} alt={testimonials.asset.alt} width={200} height={50} />
+          <h2>{testimonials.name}</h2>
+          <p className="text-center">{testimonials.content}</p>
+          <div className="flex">
+            <LiaFacebookSquare size={50} />
+            <LiaTwitterSquare size={50} />
+            <LiaSnapchatSquare size={50} />
+          </div>
+        </div>
+      ))}
     </div>
   );
 };
