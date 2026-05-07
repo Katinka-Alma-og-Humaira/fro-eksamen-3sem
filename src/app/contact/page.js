@@ -6,9 +6,9 @@ export default function ContactPage() {
   return (
     <div>
       <Newsletter />
-      <sektion>
+      <section>
         <Testimonials />
-      </sektion>
+      </section>
       <Footer />
     </div>
   );
