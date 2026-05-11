@@ -7,7 +7,7 @@ const Newsletter = () => {
         Subscribe to our newsletter and never miss an <span>Event</span>
       </h3>
 
-      <input className="border-b border-black outline-none p-2 w-full max-w-md " type="email" placeholder="Enter your Email" />
+      <input className="border-b border-white outline-none p-2 w-full max-w-md text-white" type="email" placeholder="Enter your Email" />
     </section>
   );
 };
