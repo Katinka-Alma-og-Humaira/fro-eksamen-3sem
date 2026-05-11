@@ -36,4 +36,9 @@ body {
   h3 {
     color: var(--color-text);
   }
+
+  .swiper .swiper-button-next,
+  .swiper .swiper-button-prev {
+    color: var(--color-neutrals-200);
+  }
 }

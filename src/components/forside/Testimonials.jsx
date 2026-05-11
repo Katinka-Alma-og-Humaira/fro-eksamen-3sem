@@ -3,7 +3,8 @@
 // import { LiaTwitterSquare } from "react-icons/lia";
 // import { LiaFacebookSquare } from "react-icons/lia";
 import { cacheLife } from "next/cache";
-import TestimonialsSlideshow from "./TestimonialsSlideshow";
+// import TestimonialsSlideshow from "./TestimonialsSlideshow";
+import TestimonialsSlider2 from "./TestimonialsSlider2";
 
 async function getTestimonials() {
   "use cache";
@@ -18,7 +19,7 @@ const Testimonials = async () => {
   console.log(testimonials);
   return (
     <>
-      <TestimonialsSlideshow testimonials={testimonials} />
+      <TestimonialsSlider2 testimonials={testimonials} />
     </>
   );
 };
