@@ -19,14 +19,16 @@ const Footer = async () => {
     <footer className="flex flex-col justify-center items-center gap-3 py-10 m-5">
       <div className="flex flex-col sm:flex-row sm:justify-between gap-8">
         <div>
-          <img className="mb-10" src="/assets/icon/Logo_main.svg" alt="Billede af Night Club logo" width={150} />
+          <div className="flex justify-center items-center sm:text-left">
+            <img className="mb-10" src="/assets/icon/Logo_main.svg" alt="Billede af Night Club logo" width={150} />
+          </div>
           <div className="text-center mb-8 sm:text-left">
             <h3 className="text-(--color-pink)">LOCATION</h3>
             <p>Kompagnistræde 278</p>
             <p>1265 Købehavn K</p>
           </div>
           <div className="text-center sm:text-left">
-            <h3 className="text-(--color-pink)">OPENING HOURS</h3>
+            <h3 className="text-[--color-pink]">OPENING HOURS</h3>
             <p>WED - THU 10:30 PMTO 3 AM</p>
             <p>SAT - SUN: 11 PM TO 5 AM</p>
           </div>
