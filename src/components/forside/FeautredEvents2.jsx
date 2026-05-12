@@ -38,9 +38,17 @@ const FeautredEvents2 = ({ feauturedevents }) => {
               }}
               transition={{ duration: 0.3, ease: "easeOut" }}
               animate={{ x: -50, rotate: 50 }}
-            >
-              <p className="!text-[var(--color-pink)]">hej</p>
-            </motion.div>
+            ></motion.div>
+
+            <motion.div
+              className="absolute bottom-0 right-0 bg-[var(--color-pink)] w-25 h-25"
+              variants={{
+                rest: { y: 200, opacity: 0 }, // starter nedenfor
+                hover: { y: 60, opacity: 1 },
+              }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              animate={{ x: 50, rotate: 50 }}
+            ></motion.div>
           </div>
 
           <div className="flex justify-between p-1 bg-[var(--color-pink)]">
