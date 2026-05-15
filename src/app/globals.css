@@ -74,3 +74,43 @@ body {
     color: var(--color-neutrals-200);
   }
 }
+
+#popup {
+  translate: -100% 0;
+  opacity: 0;
+  transition:
+    translate 0.3s ease,
+    opacity 0.3s ease,
+    display 0.3s allow-discrete,
+    overlay 0.3s allow-discrete;
+}
+
+#popup:popover-open {
+  translate: 0 0;
+  opacity: 1;
+}
+
+@starting-style {
+  #popup:popover-open {
+    translate: -100% 0;
+    opacity: 0;
+  }
+}
+
+#popup::backdrop {
+  background: rgba(0, 0, 0, 0);
+  transition:
+    background 0.3s ease,
+    display 0.3s allow-discrete,
+    overlay 0.3s allow-discrete;
+}
+
+#popup:popover-open::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+@starting-style {
+  #popup:popover-open::backdrop {
+    background: rgba(0, 0, 1, 1);
+  }
+}
