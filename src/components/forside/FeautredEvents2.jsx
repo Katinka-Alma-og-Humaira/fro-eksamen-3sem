@@ -5,7 +5,8 @@ import { motion } from "motion/react";
 
 const FeautredEvents2 = ({ feauturedevents }) => {
   return (
-    <div className="flex flex-col md:flex-row gap-8 items-center justify-center">
+    <div className="relative flex flex-col md:flex-row gap-8 items-center justify-center">
+      <img src="/assets/bg/slider_bg_overlay.png" alt="baggrunsbillede med blå farver" className="absolute" />
       {feauturedevents.map((event) => (
         <motion.div key={event.id} className="relative w-[400px]" initial="rest" whileHover="hover" animate="rest">
           <div className="relative overflow-hidden">
