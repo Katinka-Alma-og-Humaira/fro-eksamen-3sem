@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import Button from "@/components/Button";
 
 const eventsPerPage = 3;
 
@@ -27,9 +28,9 @@ const UpcommingEventSlider = ({ events, slug }) => {
             </h3>
             <p>{event.description}</p>
             <div className="flex justify-center items-center min-[570px]:justify-end">
-              <button href={`/detail-event/${event.slug}`} className="text-white py-3 px-8 border-y border-white my-8 cursor-pointer">
-                read more
-              </button>
+              <Button variant="whiteTopBottom" href={`/detail-event/${event.slug}`}>
+                READ MORE
+              </Button>
             </div>
           </div>
         </div>

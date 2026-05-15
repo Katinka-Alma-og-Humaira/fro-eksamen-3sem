@@ -1,4 +1,5 @@
 import { cacheLife } from "next/cache";
+import Button from "@/components/Button";
 
 async function getEvent(slug) {
   "use cache";
@@ -26,7 +27,7 @@ const Page = async ({ params }) => {
       </h2>
       <div className=" min-[800px]:mx-0 mx-(--space-s) grid grid-cols-1 min-[800px]:grid-cols-2 min-[800px]:gap-x-30">
         <div>
-          <h3 className="mb-(--space-xs)">{event.category}</h3>
+          <h3 className="mb-(--space-xs)">Category: {event.category}</h3>
           <h3>
             <span className="text-(--color-pink)">{event.ageLimit}</span>
             <span> | </span>
@@ -40,7 +41,7 @@ const Page = async ({ params }) => {
               ))}
             </ul>
           </div>
-          <button className="text-white">BOOK NOW</button>
+          <Button variant="transparent">BOOK TABLE</Button>
         </div>
         <div>
           <h2 className="mb-(--space-3xs)">Program</h2>
