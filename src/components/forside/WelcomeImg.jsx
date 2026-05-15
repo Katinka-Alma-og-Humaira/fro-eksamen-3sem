@@ -7,11 +7,11 @@ const WelcomeImg = () => {
     <div className="flex flex-col md:flex-row gap-8 items-center justify-center">
       <motion.div key="1" className="relative w-[300px]" initial="rest" whileHover="hover" animate="rest">
         <div className="relative group w-[300px] overflow-hidden">
-          <img src="/assets/content-img/thumb1.jpg" alt="Food from restaurant" />
+          <img src="/assets/content-img/thumb1.jpg" alt="Billede af bord fra klubben" />
           <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black">
             <img src="/assets/icon/favicon.png" alt="Food from restaurant" />
-            <h4 className="text-white scale-30 group-hover:scale-100 transition-all duration-900 ease-out">Hej</h4>
-            <p className="max-w-[20ch] text-white translate-x-10 group-hover:translate-x-0 transition-all duration-900 ease-out">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum sit repellendus placeat nisi. Quod voluptas explicabo nihil officia. Mollitia sed ab nesciunt corrupti voluptas voluptatum nihil sint dolore repellendus nisi.</p>
+            <h4 className="pb-1 scale-30 group-hover:scale-100 transition-all duration-900 ease-out">NIGHTCLUB</h4>
+            <p className="text-sm! text-center max-w-[35ch] translate-x-10 group-hover:translate-x-0 transition-all duration-900 ease-out">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum sit repellendus placeat nisi. Quod voluptas explicabo nihil officia. Mollitia sed ab nesciunt corrupti voluptas voluptatum nihil sint dolore repellendus nisi.</p>
           </div>
           <motion.div
             className="absolute top-0 left-0 bg-[var(--color-pink)] w-25 h-25"
@@ -36,11 +36,11 @@ const WelcomeImg = () => {
 
       <motion.div key="2" className="relative w-[300px]" initial="rest" whileHover="hover" animate="rest">
         <div className="relative group w-[300px] overflow-hidden">
-          <img src="/assets/content-img/reastaurant_1.jpg" alt="Food from restaurant" />
+          <img src="/assets/content-img/reastaurant_1.jpg" alt="Mad fra restaurant" />
           <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black">
             <img src="/assets/icon/favicon.png" alt="Food from restaurant" />
-            <h4 className="text-white scale-30 group-hover:scale-100 transition-all duration-900 ease-out">Hej</h4>
-            <p className="max-w-[20ch] text-white translate-x-10 group-hover:translate-x-0 transition-all duration-900 ease-out">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum sit repellendus placeat nisi. Quod voluptas explicabo nihil officia. Mollitia sed ab nesciunt corrupti voluptas voluptatum nihil sint dolore repellendus nisi.</p>
+            <h3 className="pb-1 scale-30 group-hover:scale-80 transition-all duration-900 ease-out">RESTAURANT</h3>
+            <p className="text-sm! text-center max-w-[35ch] translate-x-10 group-hover:translate-x-0 transition-all duration-900 ease-out">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum sit repellendus placeat nisi. Quod voluptas explicabo nihil officia. Mollitia sed ab nesciunt corrupti voluptas voluptatum nihil sint dolore repellendus nisi.</p>
           </div>
           <motion.div
             className="absolute top-0 left-0 bg-[var(--color-pink)] w-25 h-25"
@@ -65,11 +65,11 @@ const WelcomeImg = () => {
 
       <motion.div key="3" className="relative w-[300px]" initial="rest" whileHover="hover" animate="rest">
         <div className="relative group w-[300px] overflow-hidden">
-          <img src="/assets/content-img/thumb2.jpg" alt="Food from restaurant" />
+          <img src="/assets/content-img/thumb2.jpg" alt="Billede af kvinde i bar" />
           <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black">
             <img src="/assets/icon/favicon.png" alt="Food from restaurant" />
-            <h4 className="text-white scale-30 group-hover:scale-100 transition-all duration-900 ease-out">Hej</h4>
-            <p className="max-w-[20ch] text-white translate-x-10 group-hover:translate-x-0 transition-all duration-900 ease-out">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum sit repellendus placeat nisi. Quod voluptas explicabo nihil officia. Mollitia sed ab nesciunt corrupti voluptas voluptatum nihil sint dolore repellendus nisi.</p>
+            <h3 className="pb-1 scale-30 group-hover:scale-80 transition-all duration-900 ease-out">BAR</h3>
+            <p className="text-sm! text-center max-w-[35ch] translate-x-10 group-hover:translate-x-0 transition-all duration-900 ease-out">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum sit repellendus placeat nisi. Quod voluptas explicabo nihil officia. Mollitia sed ab nesciunt corrupti voluptas voluptatum nihil sint dolore repellendus nisi.</p>
           </div>
           <motion.div
             className="absolute top-0 left-0 bg-[var(--color-pink)] w-25 h-25"

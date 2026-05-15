@@ -20,15 +20,15 @@ const FeautredEvents2 = ({ feauturedevents }) => {
               transition={{ duration: 0.3 }}
             />
             <motion.div
-              className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center bg-black p-2"
+              className="absolute bottom-0 left-0 right-0 flex flex-col bg-black p-2"
               variants={{
                 rest: { y: "100%" },
                 hover: { y: 0 },
               }}
               transition={{ duration: 0.3, ease: "easeOut" }}
             >
-              <h2>{event.title}</h2>
-              <p className="text-center">{event.description}</p>
+              <h4 className="text-left">{event.title}</h4>
+              <p className="text-left text-sm! max-w-[45ch]">{event.description}</p>
             </motion.div>
 
             <motion.div
@@ -53,8 +53,16 @@ const FeautredEvents2 = ({ feauturedevents }) => {
           </div>
 
           <div className="flex justify-between p-1 bg-[var(--color-pink)]">
-            <h2>{event.location}</h2>
-            <h2>{event.date}</h2>
+            <h4>{event.location}</h4>
+            <h4>
+              {new Date(event.date)
+                .toLocaleDateString("en-EN", {
+                  day: "2-digit",
+                  month: "long",
+                })
+                .replace(/\b\w/, (c) => c.toUpperCase())}
+            </h4>
+            {/*fundet fra research og ai */}
           </div>
         </motion.div>
       ))}

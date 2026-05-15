@@ -1,33 +1,20 @@
 "use client";
 
-import React, { useRef } from "react";
-import { motion } from "motion/react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-
 import "swiper/css";
 
 const Video = () => {
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
-
+  const [prevEl, setPrevEl] = useState(null);
+  const [nextEl, setNextEl] = useState(null);
+  // ai har hjulpet med at få swiper til at fungere med pilene i bunden da det ikke er swipers standard styling
   return (
     <div className="flex flex-col items-center px-4 gap-4">
-      <motion.div className="relative w-full max-w-[900px] overflow-hidden" initial="rest" whileHover="hover" animate="rest">
-        <motion.div className="absolute top-0 left-0 bg-[var(--color-pink)] w-27 h-27 z-20" variants={{ rest: { y: -200, opacity: 0 }, hover: { y: -60, opacity: 1 } }} transition={{ duration: 0.3, ease: "easeOut" }} animate={{ x: -50, rotate: 50 }} />
-        <motion.div className="absolute bottom-0 right-0 bg-[var(--color-pink)] w-27 h-27 z-20" variants={{ rest: { y: 200, opacity: 0 }, hover: { y: 60, opacity: 1 } }} transition={{ duration: 0.3, ease: "easeOut" }} animate={{ x: 50, rotate: 50 }} />
-        <Swiper
-          modules={[Navigation]}
-          navigation={{ prevEl: prevRef.current, nextEl: nextRef.current }}
-          onBeforeInit={(swiper) => {
-            swiper.params.navigation.prevEl = prevRef.current;
-            swiper.params.navigation.nextEl = nextRef.current;
-          }}
-          spaceBetween={50}
-          slidesPerView={1}
-          className="w-full"
-        >
-          {/* ai brugt her til at manipulere ved swipers snimation */}
+      <div className="relative w-full max-w-[900px] overflow-hidden">
+        <div className="absolute top-0 left-0 bg-[var(--color-pink)] w-30 h-30 z-2 rotate-45 -translate-x-15 -translate-y-15" />
+        <div className="absolute bottom-0 right-0 bg-[var(--color-pink)] w-30 h-30 z-2 rotate-45 translate-x-15 translate-y-15" />
+        <Swiper modules={[Navigation]} navigation={{ prevEl, nextEl }} spaceBetween={50} slidesPerView={1} className="w-full">
           <SwiperSlide>
             <video className="w-full aspect-video object-cover" src="/assets/media/video-crowd.mp4" controls />
           </SwiperSlide>
@@ -38,13 +25,13 @@ const Video = () => {
             <video className="w-full aspect-video object-cover" src="/assets/media/video-dj-crowd1.mp4" controls />
           </SwiperSlide>
         </Swiper>
-      </motion.div>
+      </div>
 
       <div className="flex gap-3">
-        <button ref={prevRef} className="text-[var(--color-neutrals-200)] cursor-pointer border border-white py-2 px-3">
+        <button ref={setPrevEl} className="text-[var(--color-neutrals-200)] cursor-pointer border border-white py-2 px-3">
           ◀
         </button>
-        <button ref={nextRef} className="text-[var(--color-neutrals-200)] cursor-pointer border border-white py-2 px-3">
+        <button ref={setNextEl} className="text-[var(--color-neutrals-200)] cursor-pointer border border-white py-2 px-3">
           ▶
         </button>
       </div>
