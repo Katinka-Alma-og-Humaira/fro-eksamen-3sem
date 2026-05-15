@@ -29,7 +29,7 @@ const BurgerMenu = () => {
 
         <img src="/assets/icon/Logo_main.svg" alt="Logo" width={200} height={200} />
 
-        <button popovertarget="popup" popovertargetaction="show">
+        <button popoverTarget="popup" popoverTargetAction="show">
           <GiHamburgerMenu fill="var(--color-white)" size={50} />
         </button>
       </div>
