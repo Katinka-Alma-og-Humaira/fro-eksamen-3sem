@@ -1,9 +1,10 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 
 const eventsPerPage = 3;
 
-const UpcommingEventSlider = ({ events }) => {
+const UpcommingEventSlider = ({ events, slug }) => {
   const [page, setPage] = useState(0);
   const totalPages = Math.ceil(events.length / eventsPerPage);
   const currentEvents = events.slice(page * eventsPerPage, page * eventsPerPage + eventsPerPage);
@@ -13,7 +14,9 @@ const UpcommingEventSlider = ({ events }) => {
       {currentEvents.map((event) => (
         <div key={event.slug} className="my-20 grid grid-cols-1 min-[570px]:grid-cols-2 gap-5 items-start">
           <div>
-            <img className="my-8 min-[570px]:my-0" src={`${process.env.NEXT_PUBLIC_API_URL}${event.asset.url}`} alt={event.asset.alt} />
+            <Link href={`/detail-event/${event.slug}`}>
+              <img className="my-8 min-[570px]:my-0" src={`${process.env.NEXT_PUBLIC_API_URL}${event.asset.url}`} alt={event.asset.alt} />
+            </Link>
           </div>
           <div>
             <h2 className="mb-2">{event.slug}</h2>
@@ -24,7 +27,9 @@ const UpcommingEventSlider = ({ events }) => {
             </h3>
             <p>{event.description}</p>
             <div className="flex justify-center items-center min-[570px]:justify-end">
-              <button className="text-white py-3 px-8 border-y border-white my-8 cursor-pointer">read more</button>
+              <button href={`/detail-event/${event.slug}`} className="text-white py-3 px-8 border-y border-white my-8 cursor-pointer">
+                read more
+              </button>
             </div>
           </div>
         </div>
