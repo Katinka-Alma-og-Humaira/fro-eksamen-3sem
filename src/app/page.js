@@ -1,10 +1,10 @@
 import Hero from "@/components/forside/Hero";
-import NightclubGallery from "@/components/forside/NightclubGallery";
+import GalleryData from "@/components/forside/GalleryData";
 export default function Home() {
   return (
     <div>
       <Hero />
-      <NightclubGallery />
+      <GalleryData />
     </div>
   );
 }
