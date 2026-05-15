@@ -1,3 +1,5 @@
+import Button from "@/components/Button";
+
 const Newsletter = () => {
   return (
     <section className="flex flex-col justify-center items-center gap-3 py-10 m-5">
@@ -8,6 +10,7 @@ const Newsletter = () => {
       </h3>
 
       <input className="border-b border-white outline-none p-2 w-full max-w-md text-white" type="email" placeholder="Enter your Email" />
+      <Button variant="">SUBSCRIBE</Button>
     </section>
   );
 };
