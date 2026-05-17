@@ -6,7 +6,7 @@ const NavBar = () => {
   const pageNavn = usePathname();
 
   return (
-    <div className="relative flex justify-center gap-70 p-8 h-25 w-full border-[var(--color-pink)] border-t-2 border-b-2">
+    <div className="hidden md:flex relative flex justify-center gap-70 p-8 h-25 w-full border-[var(--color-pink)] border-t-2 border-b-2">
       <div className="absolute top-0 left-0 w-0 h-0" style={{ borderTop: "30px solid var(--color-pink)", borderRight: "30px solid transparent" }} />
       <div className="absolute bottom-0 right-0 w-0 h-0" style={{ borderBottom: "30px solid var(--color-pink)", borderLeft: "30px solid transparent" }} />
 
